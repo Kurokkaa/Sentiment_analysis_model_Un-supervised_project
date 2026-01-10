@@ -73,7 +73,7 @@ def load_data(dataset_old="./emotion_speech_dataset", dataset_new="./dataset_1",
 
 
     print(f"[*] Processing original dataset: {dataset_old}")
-    available_emotions = {"Angry", "Happy", "Sad", "Neutral", "Surprise"}
+    available_emotions = {"Angry", "Happy", "Sad", "Neutral"}
     
     for speaker_folder in glob.glob(os.path.join(dataset_old, "*")):
         if not os.path.isdir(speaker_folder): continue
