@@ -4,12 +4,16 @@ This project was developed for the **(Un)supervised Project** course. It provide
 
 ---
 
+## Datasets
+
+The system is train on ESD and RAVD
+
 ## 📌 Project Overview
 
 The system processes long audio files to generate transcribed text labeled with specific emotions: **Neutral**, **Happy**, **Angry**, or **Sad**.
 
 The project consists of two main components:
-1.  **Hybrid Training (`sentiments_analysis.py`)**: Uses a pre-trained **Wav2Vec2** model (`superb/wav2vec2-base-superb-er`) to "pseudo-label" new data. This data is combined with traditional datasets to train a fast **MLP (Multi-Layer Perceptron)** classifier.
+1.  **Hybrid Training (`sentiments_analysis.py`)**: Uses a pre-trained **Wav2Vec2** model (`superb/wav2vec2-base-superb-er`) to "pseudo-label" new data. This data is combined with the **ESD** (Emotion Speech Dataset) and **RAVDESS** datasets to train a fast **MLP (Multi-Layer Perceptron)** classifier.
 2.  **Inference Pipeline (`main.py`)**: Utilizes **OpenAI Whisper** for transcription and the trained MLP model to predict emotions on a per-segment basis.
 
 
