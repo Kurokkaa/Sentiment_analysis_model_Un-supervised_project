@@ -22,6 +22,7 @@ The project consists of two main components:
 
 ## 🚀 Features
 
+* **Linguistic & Prosodic Feature Analysis (`Extraction_with_parselmouth.py`)**: Uses Parselmouth (Praat) to extract Pitch, Intensity, Jitter/Shimmer, HNR, Speech Rate, and Duration for emotion-specific acoustic coherence analysis.
 * **Transcription**: Powered by the `whisper-medium.en` model for high-accuracy English speech-to-text.
 * **Emotion Detection**: Classifies segments into four distinct emotional states.
 * **Hybrid Audio Analysis**: Extracts **MFCC**, **Chroma**, and **Mel Spectrogram** features for robust classification.
@@ -31,7 +32,7 @@ The project consists of two main components:
 
 ## 🛠️ Tech Stack
 
-* **Speech Processing**: `Librosa`, `Soundfile`, `Pydub`.
+* **Speech Processing**: `Librosa`, `Soundfile`, `Pydub`, `Parselmouth`.
 * **Deep Learning**: `PyTorch`, `Transformers` (Hugging Face).
 * **Transcription**: `OpenAI Whisper`.
 * **Machine Learning**: `Scikit-learn` (MLP Classifier).
@@ -46,4 +47,7 @@ The project consists of two main components:
 ├── dataset_1/              # Unlabeled data for pseudo-labeling
 ├── emotion_speech_dataset/ # Labeled dataset for supervised training
 ├── result/                 # Storage for the final trained model
-└── temp_segments/          # Temporary cache for audio segment processing
+├── temp_segments/          # Temporary cache for audio segment processing
+└── Extraction_with_parselmouth.py # Script for prosodic and phonetic feature extraction and analysis
+
+
